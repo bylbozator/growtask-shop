@@ -1,0 +1,26 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.title {
+  padding-block: 20px 12px;
+}
+
+.container {
+  @include container;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.heading {
+  font-family: $font-heading;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: $color-text;
+
+  @include tablet {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,40 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  border-radius: $radius-xl;
+  background-color: $color-white;
+  box-shadow: 0 0 10px rgba(13, 13, 13, 0.08);
+
+  @include tablet {
+    padding: 20px;
+  }
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-family: $font-heading;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: $color-text-2;
+
+  @include tablet {
+    font-size: 20px;
+  }
+}
+
+.description {
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-gray;
+}

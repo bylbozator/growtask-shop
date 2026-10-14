@@ -1,0 +1,36 @@
+// ============================================================
+//  Дизайн-токены (извлечены из макета Figma)
+// ============================================================
+
+// --- Цвета ---
+$color-primary: #f23051; // основной красный (кнопки)
+$color-primary-dark: #a61029; // тёмно-красный (активная корзина)
+$color-error: #cc2929; // скидка / бейдж
+$color-text: #0d0d0d; // заголовки, итог
+$color-text-2: #2b2b2b; // основной текст
+$color-text-3: #262626; // активная вкладка
+$color-gray: #404040; // вторичный текст
+$color-gray-light: #999999; // подписи, плейсхолдеры
+$color-border: #f2f2f2; // разделители, фон полей
+$color-pink: #fcd7dd; // фон футера
+$color-success: #0e8c0e; // галочка успеха
+$color-success-bg: #c3e5c3; // фон маркера успеха
+$color-white: #ffffff;
+
+// --- Шрифты ---
+$font-heading: 'Vladivostok', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+$font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+// --- Сетка ---
+$container-max: 1420px; // ширина контента на FullHD (1920)
+$container-min-pad: 45px; // боковые отступы на HD (1366)
+$container-pad-mobile: 16px; // боковые отступы на планшете/мобиле
+
+// --- Скругления ---
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+
+// --- Тени ---
+$shadow-card: 0 0 10px rgba(13, 13, 13, 0.08);

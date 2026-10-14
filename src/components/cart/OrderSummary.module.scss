@@ -1,0 +1,77 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: $radius-xl;
+  background-color: $color-white;
+  box-shadow: 0 0 10px rgba(13, 13, 13, 0.08);
+}
+
+.title {
+  font-family: $font-heading;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: $color-text-2;
+
+  @include tablet {
+    font-size: 20px;
+  }
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 8px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.label {
+  font-size: 13px;
+  line-height: 20px;
+  color: $color-gray;
+}
+
+.value {
+  font-size: 13px;
+  line-height: 20px;
+  color: $color-text;
+}
+
+.discount {
+  font-size: 13px;
+  line-height: 20px;
+  color: $color-error;
+}
+
+.divider {
+  height: 2px;
+  background-color: $color-border;
+}
+
+.totalLabel {
+  font-family: $font-heading;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: $color-text;
+}
+
+.totalValue {
+  font-family: $font-heading;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: $color-text;
+}

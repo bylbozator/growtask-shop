@@ -1,0 +1,89 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+// Раскладка оформления: колонка шагов (резиновая) + фиксированный чек 340px.
+// Под шагами — кнопка «Оформить заказ» с пояснением.
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  padding-bottom: 40px;
+}
+
+.container {
+  @include container;
+}
+
+.layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1;
+  min-width: 0;
+  padding-right: 20px;
+
+  @include tablet {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bottomButton {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 2px solid $color-border;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+}
+
+.bottomHint {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-gray-light;
+
+  svg {
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+}
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 340px;
+  flex-shrink: 0;
+
+  @include tablet {
+    width: 100%;
+  }
+}

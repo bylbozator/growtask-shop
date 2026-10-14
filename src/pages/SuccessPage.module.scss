@@ -1,0 +1,16 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+}
+
+.container {
+  @include container;
+}

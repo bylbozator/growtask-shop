@@ -1,0 +1,80 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+// Раскладка корзины: слева список товаров (резиновый),
+// справа фиксированный чек 340px. На планшете/мобиле — в одну колонку.
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  padding-bottom: 40px;
+}
+
+.container {
+  @include container;
+}
+
+.layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.cards {
+  flex: 1;
+  min-width: 0;
+  padding-right: 20px;
+
+  @include tablet {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.divider {
+  height: 2px;
+  background-color: $color-border;
+
+  @include tablet {
+    height: 2px;
+  }
+}
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 340px;
+  flex-shrink: 0;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.skeletonList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skeleton {
+  height: 104px;
+  border-radius: $radius-md;
+  background-color: $color-border;
+  animation: skeleton-pulse 1.2s ease-in-out infinite;
+}

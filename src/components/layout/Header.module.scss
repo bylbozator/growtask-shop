@@ -1,0 +1,150 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: $color-white;
+}
+
+.top {
+  background-color: $color-white;
+}
+
+.container {
+  @include container;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-block: 8px;
+  min-height: 64px;
+}
+
+.madeIn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.flag {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: linear-gradient(
+    #ffffff 33.33%,
+    #1c3578 33.33% 66.66%,
+    #e4181c 66.66%
+  );
+}
+
+.madeText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.madeLabel {
+  font-size: 11px;
+  line-height: 12px;
+  color: $color-text;
+}
+
+.logo {
+  font-family: $font-heading;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  color: $color-text;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cartButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  height: 48px;
+  border-radius: $radius-md;
+  background-color: $color-border;
+  color: $color-primary-dark;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: #e8e8e8;
+  }
+}
+
+.cartBadge {
+  position: absolute;
+  top: -6px;
+  right: 6px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-md;
+  background-color: $color-error;
+  color: $color-white;
+  font-size: 11px;
+  line-height: 1;
+}
+
+.cartBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.cartTotal {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  max-width: 80px;
+  @include truncate;
+}
+
+.mobileTitle {
+  display: none;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-text-2;
+}
+
+.line {
+  height: 2px;
+  background-color: $color-white;
+}
+
+.lineInner {
+  @include container;
+
+  height: 2px;
+  background-color: $color-border;
+}
+
+// --- Планшет и мобиле: вместо меню — заголовок страницы ---
+@include tablet {
+  .madeIn,
+  .actions {
+    display: none;
+  }
+
+  .mobileTitle {
+    display: block;
+  }
+}

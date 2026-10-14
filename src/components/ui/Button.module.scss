@@ -1,0 +1,95 @@
+@use '../../styles/variables' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: $radius-md;
+  font-family: $font-body;
+  font-weight: 600;
+  white-space: nowrap;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    opacity 0.15s ease;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.label {
+  line-height: 1;
+}
+
+// --- Размеры ---
+.xs {
+  height: 32px;
+  font-size: 14px;
+}
+
+.s {
+  height: 40px;
+  padding-inline: 16px;
+  font-size: 14px;
+}
+
+.m {
+  height: 48px;
+  padding-inline: 20px;
+  font-size: 16px;
+}
+
+.full {
+  width: 100%;
+}
+
+.iconOnly {
+  padding: 0;
+}
+
+.iconOnly.xs {
+  width: 32px;
+}
+
+.iconOnly.s {
+  width: 40px;
+}
+
+.iconOnly.m {
+  width: 48px;
+}
+
+// --- Варианты ---
+.primary {
+  background-color: $color-primary;
+  color: $color-white;
+
+  &:hover:not(:disabled) {
+    background-color: #e01f42;
+  }
+
+  &:active:not(:disabled) {
+    background-color: #cf1b3c;
+  }
+}
+
+.secondary {
+  background-color: $color-border;
+  color: $color-text-2;
+
+  &:hover:not(:disabled) {
+    background-color: #e8e8e8;
+  }
+}
+
+.gray {
+  background-color: $color-text;
+  color: $color-white;
+
+  &:hover:not(:disabled) {
+    background-color: #262626;
+  }
+}

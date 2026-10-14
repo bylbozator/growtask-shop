@@ -1,0 +1,87 @@
+@use '../../styles/variables' as *;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+}
+
+.label {
+  font-size: 11px;
+  line-height: 16px;
+  color: $color-gray-light;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 48px;
+  padding: 4px 12px;
+  background-color: $color-border;
+  border: 2px solid transparent;
+  border-radius: $radius-md;
+  transition: border-color 0.15s ease;
+}
+
+.field.invalid .control {
+  border-color: $color-error;
+}
+
+.textareaControl {
+  align-items: stretch;
+  padding-block: 8px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cccccc;
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 4px;
+  border: none;
+  background: transparent;
+  font-family: $font-body;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-text-2;
+  outline: none;
+
+  &::placeholder {
+    color: $color-gray-light;
+  }
+}
+
+.textarea {
+  min-height: 80px;
+  resize: vertical;
+  padding: 0 4px;
+}
+
+.clear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #cccccc;
+  flex-shrink: 0;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: $color-gray-light;
+  }
+}
+
+.error {
+  font-size: 11px;
+  line-height: 16px;
+  color: $color-error;
+}

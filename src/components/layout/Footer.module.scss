@@ -1,0 +1,88 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.footer {
+  margin-top: auto;
+  padding-block: 40px 80px;
+  background-color: $color-pink;
+
+  @include tablet {
+    padding-block: 20px 150px;
+  }
+}
+
+.container {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include tablet {
+    gap: 32px;
+  }
+}
+
+.line {
+  height: 2px;
+  background-color: $color-border;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+.copyright {
+  font-size: 13px;
+  line-height: 20px;
+  color: $color-gray-light;
+}
+
+.madeIn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.flag {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: linear-gradient(
+    #ffffff 33.33%,
+    #1c3578 33.33% 66.66%,
+    #e4181c 66.66%
+  );
+}
+
+.madeText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.madeLabel {
+  font-size: 11px;
+  line-height: 12px;
+  color: $color-text;
+}
+
+.logo {
+  font-family: $font-heading;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  color: $color-text;
+}

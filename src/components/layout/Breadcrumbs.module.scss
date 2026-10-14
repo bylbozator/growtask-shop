@@ -1,0 +1,73 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.breadcrumbs {
+  padding-block: 10px;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.container {
+  @include container;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.home {
+  @include flex-center;
+
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: $radius-md;
+  background-color: $color-border;
+  color: $color-text-2;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: #e8e8e8;
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.separator {
+  padding-inline: 4px;
+  font-size: 13px;
+  line-height: 19.5px;
+  color: $color-gray-light;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  color: $color-text-2;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.active {
+  color: $color-text-3;
+  cursor: default;
+}

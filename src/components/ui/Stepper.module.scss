@@ -1,0 +1,64 @@
+@use '../../styles/variables' as *;
+
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  background-color: $color-border;
+  border-radius: $radius-md;
+}
+
+.s {
+  height: 40px;
+
+  .control {
+    width: 24px;
+  }
+
+  .value {
+    min-width: 34px;
+    font-size: 13px;
+  }
+}
+
+.xs {
+  height: 32px;
+  border-radius: $radius-sm;
+
+  .control {
+    width: 20px;
+  }
+
+  .value {
+    min-width: 26px;
+    font-size: 11px;
+  }
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  color: $color-text-2;
+  transition: opacity 0.15s ease;
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    opacity: 0.6;
+  }
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  align-self: stretch;
+  font-weight: 400;
+  color: $color-text-2;
+  text-align: center;
+}

@@ -1,0 +1,66 @@
+@use '../../styles/variables' as *;
+
+.promo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 4px;
+  color: $color-text-2;
+
+  &:hover .headText {
+    color: $color-primary;
+  }
+}
+
+.headText {
+  flex: 1;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  transition: color 0.15s ease;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.applied {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 48px;
+  padding: 12px 12px 12px 16px;
+  border-radius: $radius-md;
+  background-color: rgba(14, 140, 14, 0.1);
+  font-size: 14px;
+  color: $color-success;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+.removePromo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: $color-success;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
